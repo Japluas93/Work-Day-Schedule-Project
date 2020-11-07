@@ -8,7 +8,7 @@
 //  WHEN I scroll down THEN I am presented with time blocks for standard business hours
 
 //         9 a.m.
-//         10 a.m.             (Use JQuery to display the text for the times)
+//         10 a.m.             (Use function to display the text for the times) Times (strings) are stored in an array
 //         11 a.m.
 //         12 p.m. etc.....     6 p.m.
 
@@ -16,9 +16,9 @@
         
 //       *Will be using CSS to edit the color of each time block
 
-//  WHEN I click into a time block THEN I can enter an event
+//  WHEN I click into a time block THEN I can enter an text for an event
 
-//      *On click, user should be able to enter information in that time block (input/text area)
+//      *On click, user should be able to enter information in that time block (input/text area element)
 
 
 //  WHEN I click the save button for that time block THEN the text for that event is saved in local storage
