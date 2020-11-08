@@ -30,5 +30,26 @@
 
 //       *When user refreshes the page, all of the saved should remain stored in the time block field -->
 
-var currentDay = "";
-var workHours = [9, 10, 11, 12, 1, 2, 3, 4, 5, 6];
+var currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+$("#currentDay").text(currentTime);
+var currentHour = moment().hour();
+var workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
+
+$(".saveBtn").on("click", function(){
+    var timeBlock = $(this).attr("id").split("-")[2]
+    var userEntry = $("#event-text-" + timeblock).val()
+    console.log(timeblock, userentry); 
+    localStorage.setItem(timeblock, userentry)
+})
+for (let i = 9; i < 19; i++){
+    $("#event-text-" + i).val(localStorage.getItem(i))
+    if (currentHour > i){
+        $("#event-text-" + i).addClass("past")
+    }
+        else if(currentHour == i){
+        $("#event-text-" + i).addClass("present")   
+        }
+        else {
+        $("#event-text-" + i).addClass("future") 
+    }
+}
