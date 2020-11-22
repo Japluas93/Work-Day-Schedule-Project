@@ -36,8 +36,8 @@ var currentHour = moment().hour();
 var workHours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 
 $(".saveBtn").on("click", function(){
-    var timeBlock = $(this).attr("id").split("-")[2]
-    var userEntry = $("#event-text-" + timeblock).val()
+    var timeblock = $(this).attr("id").split("-")[2]
+    var userentry = $("#event-text-" + timeblock).val()
     console.log(timeblock, userentry); 
     localStorage.setItem(timeblock, userentry)
 })
